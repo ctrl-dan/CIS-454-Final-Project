@@ -1,0 +1,215 @@
+
+
+@font-face {
+    font-family: 'Pictochat';
+    src: url('Nintendo-DS-BIOS.ttf');
+    
+  }
+
+body {
+    /* background */
+    background-color: #cccccc;
+    background-image: url('background.png');
+    background-position: center;
+    background-size: cover;
+    width: auto;
+    height: auto; /* You must set a specified height */
+    background-repeat: repeat;
+
+
+
+
+    /* fonts */
+    font-family: 'Pictochat', Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* Login page - Welcome.jsx */
+
+#login {
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 32px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#login .logo { display: block; width: 300px; margin: 10px auto; }
+
+#login-form { text-align: center; display: grid; }
+
+#login-form > * { padding: 10px; margin: 2px; border-radius: 5px; }
+
+#login-form > h1 { font-size: 40px; }
+
+#login-form > span { font-size: 24px; }
+
+#login-form2 { text-align: center; display: grid; }
+
+#login-form2 > * { padding: 10px; margin: 2px; border-radius: 5px; }
+
+#login-form2 > h1 { font-size: 40px; }
+
+#login-form2 > span { font-size: 24px; }
+
+/* Whiteboard page - Whiteboard.jsx */
+
+#whiteboard {
+    margin: 10px 10px;
+    background-color: white;
+    display: grid;
+    height: 95vh;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:"main     sidebar"
+                        "main     sidebar"
+                        "main     sidebar"
+                        "footer   footer";
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 4px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#whiteboard main { grid-area:main; }
+
+#whiteboard aside { grid-area:sidebar; height: 100%; overflow-y: scroll; }
+
+#whiteboard footer { grid-area:footer; }
+
+#whiteboard canvas {
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    max-width: 200%;
+    max-height: 200%;
+}
+
+/* Whiteboard page - Chat.jsx */
+
+#chat {
+    color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+    height: 100vh;
+    width: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    word-break: break-all;
+}
+
+#chat p {
+    background-color: rgb(17, 17, 17);
+    border: 5px inset lightgray;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#chat form > * {
+    border-radius: 5px;
+    width: 95.5%;
+    padding: 10px;
+    position: absolute;
+    margin-left: 3px;
+    bottom: 0;
+}
+
+#chat form { margin-top: 40px; margin-bottom: 10px; position: relative;  }
+
+aside { background-color: #252525; }
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #000000; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(240, 240, 240); 
+  }
+
+/* Whiteboard page - footer */
+
+footer { background-color: #202020; }
+
+footer > input { margin-left: 10px; }
+
+footer { display: flex; justify-content: center; align-items: center; }
+
+
+/* General */
+
+
+.collapse-button {
+    display: block;
+    width: 100%;
+  }
+  
+  .collapse-content.collapsed {
+    display: none;
+  }
+  
+  .collapsed-content.expanded {
+    display: block;
+  }
+
+button {
+    margin: 10px;
+    padding: 2px;
+    background-color: lightgray;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+button:hover { background-color: #585858; }
+
+button:active { box-shadow: 0 1px #585858; transform: translateY(1px); }
+
+*:focus { outline: none; }
+
+.link {
+    font-size: 0.75em;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.left { float: left; }
+
+.right { float: right; }
+
+.error { color: #c02739; text-align: center; display: block; }
+
+.color {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.clear { text-align: center; padding-top: 35px; font-size: 30px; }
